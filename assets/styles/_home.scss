@@ -1,6 +1,6 @@
 .hero {
 	padding:12em 0 4em;
-	background-image: url('../images/homehero_new.jpg');
+	//background-image: url('../images/homehero_new.jpg');
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 	}
 	@include bp($s5){
 		padding:19em 0 12em;
-		background-image: url('../images/homehero_new.jpg');
+		//background-image: url('../images/homehero_new.jpg');
 	}
 	
 
@@ -99,39 +99,50 @@
 }
 
 
-.subcontent--penges {
-	background-image: url('../images/cirada.png');
-	background-repeat: no-repeat;
-	background-position: right top;
-	background-size: 33.333% auto;
-	text-align: center;
-	padding:5em 0;
+.page-template-template-homepage {
+	
+	.subcontent:first-child {
+		background-image: url('../images/cirada.png');
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-size: 33.333% auto;
+		text-align: center;
+		padding:5em 0;
+	
 
-	.subcontent__title {
-		color:$pridark;
-		font-size: 1.5em;
-		margin-bottom: 1em;
-		// @include hide-text();
-		// background-image: url('../images/logo_simple.svg');
-		// background-repeat: no-repeat;
-		// background-position: center center;
-		// background-size: 100% auto;
-		// display: inline-block;
-		// height:1em;
-		// width:11em;
-		
+		.subcontent__title {
+				color:$pridark;
+				font-size: 1.5em;
+				margin-bottom: 1em;
+				border-bottom: none;
+				&:before {
+					display: none;
+				}
 
 
-		// @include bp($s5) {
-		// 	height:1.125em;
-		// 	width:14em;
-		// }
+
+				// @include hide-text();
+				// background-image: url('../images/logo_simple.svg');
+				// background-repeat: no-repeat;
+				// background-position: center center;
+				// background-size: 100% auto;
+				// display: inline-block;
+				// height:1em;
+				// width:11em;
+				
+
+
+				// @include bp($s5) {
+				// 	height:1.125em;
+				// 	width:14em;
+				// }
+			}
+
+			.subcontent__lead {
+				color:$pridark;		
+			}
+
 	}
-
-	.subcontent__lead {
-		color:$pridark;		
-	}
-
 
 }
 
