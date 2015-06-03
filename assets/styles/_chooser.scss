@@ -12,21 +12,21 @@
 	background-size: 100% auto;
 	background-position: top center;
 	
-	&.visualchooser{
-		background-image: url('../img/building_front.jpg');
-		@include bp($s2) {
-			background-image: url('../img/building_front.jpg');
-		}
-		@include bp($s3) {
-			background-image: url('../img/building_front.jpg');
-		}
-		@include bp($s4) {
-			background-image: url('../img/building_front.jpg');
-		}
-		@include bp($s5) {
-			background-image: url('../img/building_front.jpg');
-		}
-	}
+	// &.visualchooser{
+	// 	background-image: url('../img/building_front.jpg');
+	// 	@include bp($s2) {
+	// 		background-image: url('../img/building_front.jpg');
+	// 	}
+	// 	@include bp($s3) {
+	// 		background-image: url('../img/building_front.jpg');
+	// 	}
+	// 	@include bp($s4) {
+	// 		background-image: url('../img/building_front.jpg');
+	// 	}
+	// 	@include bp($s5) {
+	// 		background-image: url('../img/building_front.jpg');
+	// 	}
+	// }
 
 	svg,img {
 		display: block;

@@ -1,4 +1,4 @@
-<aside id="contactblock" class="contactblock">
+<aside id="contactblock" class="contactblock<?php echo is_singular('apartment')?' collapse':''; ?>">
 	<div class="wrapper wrapper--normal">
   <div class="fogo">
 

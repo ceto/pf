@@ -39,7 +39,7 @@
 	position: relative;
 	margin:4em auto 0;
 	max-width:600px;
-	padding:1.5em;
+	padding:1.5em 1.5em 2.5em;
 	background-color: rgba(#fff,.7);
 	@include bp($s2) {
 		@include clearfix();
@@ -77,6 +77,9 @@
 		display: block;
 		color:$highlight;
 		font-size: 2em;
+	}
+	@include bp($s4) {
+		margin-bottom: 6em;
 	}
 }
 
