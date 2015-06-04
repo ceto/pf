@@ -3,6 +3,7 @@
     "main.js": {
       "files": [
         "scripts/plugins.js",
+        "scripts/visual-chooser.js",
         "scripts/main.js"
       ],
       "main": true

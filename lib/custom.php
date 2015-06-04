@@ -272,6 +272,32 @@ function pf_metaboxes( array $meta_boxes ) {
 	/******** end of Apartment Metaboxes *****/
 
 
+  $meta_boxes['building'] = array(
+    'id'         => 'buildmeta',
+    'title'      => 'Set these elements elements',
+    'object_types'  => array( 'page'), // Post type
+    'show_on'      => array( 'key' => 'page-template', 'value' => 'template-building.php' ),
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'show_names' => true, // Show field names on the left
+    'fields'     => array(
+
+      array(
+        'name' => __('Select a view'),
+        'id'   => $prefix . 'gview',
+        'type' => 'radio_inline',
+        'options' => array(
+            '1' => 'North',
+            '2' => 'South',
+        )
+      ),
+
+
+
+
+    )
+  );
+
 
 
 	$meta_boxes['home'] = array(
@@ -402,4 +428,7 @@ function pf_remove_editor() {
 }
 
 
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
 

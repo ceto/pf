@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Building
+ * Template Name: Chooser Template
  */
 ?>
 <?php while (have_posts()) : the_post(); ?>
@@ -8,37 +8,55 @@
 <div id="container" class="container" role="main">
 	<div class="wrapper wrapper--fullwidth">
 
-	<?php $actbuilding=3; ?>
+	<?php 
+		$actbuilding=3;
+		$gview= get_post_meta( $post->ID, '_meta_gview', true );
 
+  	switch ($gview) {
+			case 1:
+				$ima = get_tax_meta( $actbuilding ,'_meta_view1');
+				$selviewlink = get_the_permalink(42);
+				$selviewtext = 'View II.';
+				break;
+			case 2:
+				$ima = get_tax_meta( $actbuilding ,'_meta_view2');
+				$selviewlink = get_the_permalink(9);
+				$selviewtext = 'View I.';
+				break;
+			
+			default:
+				$ima = get_tax_meta( $actbuilding ,'_meta_view1');
+				$selviewlink = get_the_permalink(42);
+				$selviewtext = 'View II.';
+				break;
+		}
 
-  <?php
-    $ima = get_tax_meta( $actbuilding ,'_meta_view1');
-    $imcifull = wp_get_attachment_image_src( $ima['id'], 'full169');
-    $imcilarge = wp_get_attachment_image_src( $ima['id'], 'large169');
-    $imcimedium = wp_get_attachment_image_src( $ima['id'], 'medium169');
+    $imcifull = wp_get_attachment_image_src( $ima['id'], 'full');
+    $imcilarge = wp_get_attachment_image_src( $ima['id'], 'large');
+    $imcimedium = wp_get_attachment_image_src( $ima['id'], 'medium');
   ?>
 
-	<style>
-		.visualchooser--1 {
-			min-height: 75vh;
-		}
-	  .visualchooser--1 { background-image: url('<?php echo $imcimedium[0]; ?>'); }
+<!--	<style>
+	
+	  .visualchooser--1 { background-image: url('<?= $imcimedium[0]; ?>'); }
 
 	  @media only screen and (min-width: 1024px) {
-	    .visualchooser--1 { background-image: url('<?php echo $imcilarge[0]; ?>'); }
+	    .visualchooser--1 { background-image: url('<?= $imcilarge[0]; ?>'); }
 	  }
 	  
 	  @media only screen and (min-width: 1280px) {
-	    .visualchooser--1 { background-image: url('<?php echo $imcifull[0]; ?>'); }
+	    .visualchooser--1 { background-image: url('<?= $imcifull[0]; ?>'); }
 	  }
-	</style>
+	</style> --> 
+
 
 
 
 
 	<div class="thechooser">
-		<div id="visualchooser--1" class="visualchooser visualchooser--1">
-			<a class="btn">North<i class="ion ion-reply"></i></a>
+		<div id="visualchooser" class="visualchooser visualchooser--1" data-width="<?= $imcifull[1]; ?>" data-height="<?= $imcifull[2]; ?>">
+			<img src="<?= $imcifull[0]; ?>" alt="Fin din bolig">
+			<a href="<?= $selviewlink;  ?>" class="btn"><?= $selviewtext; ?><i class="ion ion-reply"></i></a>
 		</div>
 		<div id="detailswrapper" class="wrapper wrapper--normal detailswrapper">
 			<div class="datatable datatable-apartments">

@@ -1,19 +1,24 @@
 {
-  "name": "sage",
-  "homepage": "https://roots.io/sage/",
+  "name": "pengeskapsfabrikken",
+  "homepage": "http://pengeskapsfabrikken.no",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Gabor Szabo <szabogabi@gmail.com>"
   ],
   "license": "MIT",
   "private": true,
   "dependencies": {
     "normalize-css": "~3.0.2",
     "modernizr": "2.8.2",
-    "bootstrap-sass-official": "3.3.4"
+    "bootstrap-sass-official": "3.3.4",
+    "magnific-popup": "https://github.com/dimsemenov/Magnific-Popup.git#~1.0.0",
+    "raphael": "https://github.com/DmitryBaranovskiy/raphael.git#~2.1.4"
   },
   "overrides": {
     "modernizr": {
       "main": "./modernizr.js"
+    },
+    "normalize-css": {
+      "main": "./normalize.css"
     },
     "bootstrap-sass-official": {
       "main": [
@@ -24,10 +29,19 @@
         "./assets/javascripts/bootstrap/scrollspy.js",
         "./assets/javascripts/bootstrap/tab.js"
       ]
+    },
+    "magnific-popup": {
+      "main": [
+        "./dist/jquery.magnific-popup.js"
+      ]
+    },
+    "raphael": {
+      "main": [
+        "./raphael.js"
+      ]
     }
   },
   "devDependencies": {
-    "magnific-popup": "https://github.com/dimsemenov/Magnific-Popup.git#~1.0.0",
     "Ionicons": "https://github.com/driftyco/ionicons.git#~2.0.1"
   }
 }

@@ -6,7 +6,7 @@
       <header class="form__header">
         <h2 class="form__title lineas">Meld din interesse!</h2>
       </header>
-      <form action="mailer.php" id="contactform" class="contactform" method="post">
+      <form action="<?= get_stylesheet_directory_uri(); ?>/mailer.php" id="contactform" class="contactform" method="post">
         <div class="formitem">
           <input type="text" id="form__name" name="form__name" placeholder="ditt navn (obligatorisk)">
           <label for="form__name">navn</label>
