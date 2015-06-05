@@ -175,7 +175,7 @@ textarea {
 
 
 
-::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+::-webkit-input-placeholder {
 	font-size: .875em;
   line-height: 1;
 
@@ -184,6 +184,39 @@ textarea {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+
+:-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+	font-size: .875em;
+  line-height: 1;
+
+  color: $pridark;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-moz-placeholder {
+	font-size: .875em;
+  line-height: 1;
+
+  color: $pridark;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+:-ms-input-placeholder {
+	font-size: .875em;
+  line-height: 1;
+
+  color: $pridark;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
 
 
 

@@ -1,10 +1,12 @@
+<?php wp_reset_query(); ?>
+
 <?php 
 if ( get_post_meta( get_the_ID(), 'sections', true ) ) {
 
 $sections = get_post_meta( get_the_ID(), 'sections', true );
 
 foreach ( (array) $sections as $key => $entry ) { ?>
-  <section class="subcontent">
+  <section id="subcontent--<?= $key ?>" class="subcontent subcontent--<?= $key ?>">
      
      <?php if ($entry['divider']!='') : ?>
 	     <div class="subcontent__hero">
@@ -53,3 +55,5 @@ foreach ( (array) $sections as $key => $entry ) { ?>
 
 }
 ?>
+
+<?php wp_reset_query(); ?>

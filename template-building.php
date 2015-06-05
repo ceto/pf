@@ -36,7 +36,7 @@
     $imcimedium = wp_get_attachment_image_src( $ima['id'], 'medium');
   ?>
 
-<!--	<style>
+	<!-- <style>
 	
 	  .visualchooser--1 { background-image: url('<?= $imcimedium[0]; ?>'); }
 
@@ -48,9 +48,6 @@
 	    .visualchooser--1 { background-image: url('<?= $imcifull[0]; ?>'); }
 	  }
 	</style> --> 
-
-
-
 
 
 	<div class="thechooser">
@@ -91,8 +88,9 @@
 	  </div>
 	</div>
 
+	<?php get_template_part('templates/section','lister'); ?>
 
-	</div>
+</div>
 </div>
 
 <?php endwhile; ?>

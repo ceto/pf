@@ -18,8 +18,6 @@
 
 <?php get_template_part('templates/section','lister'); ?>
 
-
-
 	<?php 
 		if (is_page(2)) {
 			get_template_part('templates/gmap');
