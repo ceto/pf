@@ -30,9 +30,6 @@
 				<li class="datapanel__item">
 					<span>P-rom</span><?php echo get_post_meta( $post->ID, '_meta_prom', true ); ?> m<sup>2</sup>
 				</li>
-				<li class="datapanel__item">
-					<span>Bod</span><?php echo get_post_meta( $post->ID, '_meta_bod', true ); ?> m<sup>2</sup>
-				</li>
 				<?php if (get_post_meta( $post->ID, '_meta_balkong', true )!='') : ?>
 					<li class="datapanel__item">
 						<span>Balkong</span><?php echo get_post_meta( $post->ID, '_meta_balkong', true ); ?> m<sup>2</sup>
@@ -47,7 +44,7 @@
 
 				<?php if (get_post_meta( $post->ID, '_meta_state', true )=='fri') : ?>
 				<li class="datapanel__item">
-					<span>Pris</span><?php echo number_format(get_post_meta( $post->ID, '_meta_pris', true ), 0, ',', ' '); ?> NOK
+					<span>Pris</span><?php echo number_format(get_post_meta( $post->ID, '_meta_pris', true ), 0, ',', ' '); ?>,-
 				</li>
 				<?php else : ?>
 				<li class="datapanel__item">

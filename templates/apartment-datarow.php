@@ -6,7 +6,7 @@
 	$ap['bra'] = get_post_meta( $post->ID, '_meta_bra', true ).' m<sup>2</sup>';
 	$ap['prom'] = get_post_meta( $post->ID, '_meta_prom', true ).' m<sup>2</sup>';
 	$ap['bod'] = get_post_meta( $post->ID, '_meta_bod', true ).' m<sup>2</sup>';
-	$ap['pris'] = number_format(get_post_meta( $post->ID, '_meta_pris', true ), 0, ',', ' ').' NOK';
+	$ap['pris'] = number_format(get_post_meta( $post->ID, '_meta_pris', true ), 0, ',', ' ').',-';
 	$ap['state'] = get_post_meta( $post->ID, '_meta_state', true );
 	$ap['svgdata1'] = get_post_meta( $post->ID, '_meta_svgdata1', true );
 	$ap['svgdata2'] = get_post_meta( $post->ID, '_meta_svgdata1', true );
@@ -48,7 +48,6 @@
 		<span class="datarow--cell"><?= $ap['floor']; ?></span>
 		<span class="datarow--cell"><?= $ap['bra']; ?></span>
 		<span class="datarow--cell"><?= $ap['prom']; ?></span>
-		<span class="datarow--cell"><?= $ap['bod']; ?></span>
 		<?php if ( $ap['state'] == 'fri' ) : ?>
 			<span class="datarow--cell"><i class="fri"></i><?= $ap['pris'] ; ?></span>
 		<?php else : ?>

@@ -58,12 +58,11 @@
 		<div id="detailswrapper" class="wrapper wrapper--normal detailswrapper">
 			<div class="datatable datatable-apartments">
 			  <p class="datarow datatable--head">
-					<span class="datarow--cell de">Navn</span>
+					<span class="datarow--cell de">Leilnr</span>
 					<span class="datarow--cell de">Roms</span>
-					<span class="datarow--cell">Etasje</span>
+					<span class="datarow--cell">Etg</span>
 					<span class="datarow--cell">BRA</span>
 					<span class="datarow--cell">P-rom</span>
-					<span class="datarow--cell">Bod</span>
 					<span class="datarow--cell">Pris / Status</span>
 			  </p>
 				<?

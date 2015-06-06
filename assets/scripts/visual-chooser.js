@@ -119,15 +119,19 @@ function redraw_canvas() {
       var state = thedata.attr('data-state');
       var url = thedata.attr('data-url');
       
-      $tiptext='<p class="tooltip__item"><span>Navn</span>'+name+'</p>';
+      $tiptext='<p class="tooltip__item"><span>Leilnr</span>'+name+'</p>';
       $tiptext+='<p class="tooltip__item"><span>Rom</span>'+rom+'</p>';
-      $tiptext+='<p class="tooltip__item"><span>Floor</span>'+floor+'</p>';
+      $tiptext+='<p class="tooltip__item"><span>Etg</span>'+floor+'</p>';
       $tiptext+='<p class="tooltip__item"><span>Bra</span>'+bra+'</p>';
-      $tiptext+='<p class="tooltip__item"><span>Prom</span>'+prom+'</p>';
-      $tiptext+='<p class="tooltip__item"><span>Bod</span>'+bod+'</p>';
-      $tiptext+='<p class="tooltip__item"><span>Pris</span>'+pris+'</p>';
-      $tiptext+='<p class="tooltip__item"><span>State</span>'+state+'</p>';
+      $tiptext+='<p class="tooltip__item"><span>P-rom</span>'+prom+'</p>';
       
+
+      if (state==='fri') {
+        $tiptext+='<p class="tooltip__item"><span>Pris</span>'+pris+'</p>';
+      }
+      if(state!=='fri') {
+        $tiptext+='<p class="tooltip__item"><span>State</span>'+state+'</p>';
+      }
       return $tiptext;
     }
   });
