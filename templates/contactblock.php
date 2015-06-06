@@ -8,7 +8,7 @@
       </header>
       <form action="<?= get_stylesheet_directory_uri(); ?>/mailer.php" id="contactform" class="contactform" method="post">
         <div class="formitem">
-          <input type="text" id="form__name" name="form__name" placeholder="ditt navn (obligatorisk)">
+          <input type="text" id="form__name" name="form__name" placeholder="navn">
           <label for="form__name">navn</label>
         </div>
         <div class="formitem">
