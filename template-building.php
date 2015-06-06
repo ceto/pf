@@ -16,18 +16,18 @@
 			case 1:
 				$ima = get_tax_meta( $actbuilding ,'_meta_view1');
 				$selviewlink = get_the_permalink(42);
-				$selviewtext = 'View II.';
+				$selviewtext = get_the_title(42);
 				break;
 			case 2:
 				$ima = get_tax_meta( $actbuilding ,'_meta_view2');
 				$selviewlink = get_the_permalink(9);
-				$selviewtext = 'View I.';
+				$selviewtext = get_the_title(9);
 				break;
 			
 			default:
 				$ima = get_tax_meta( $actbuilding ,'_meta_view1');
 				$selviewlink = get_the_permalink(42);
-				$selviewtext = 'View II.';
+				$selviewtext = get_the_title(42);
 				break;
 		}
 
