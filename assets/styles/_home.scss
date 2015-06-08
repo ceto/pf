@@ -1,5 +1,5 @@
 .hero {
-	padding:12em 0 4em;
+	padding:11em 0 4em;
 	//background-image: url('../images/homehero_new.jpg');
 	background-position: center center;
 	background-size: cover;
@@ -10,13 +10,13 @@
 		
 	}
 	@include bp($s3) {
-		padding:21em 0 9em;
+		padding:20em 0 9em;
 		height: calc(100vh - 3.875em);
 		min-height: 40em;
 		max-height: 48em;
 	}
 	@include bp($s5){
-		padding:19em 0 12em;
+		padding:18em 0 12em;
 		//background-image: url('../images/homehero_new.jpg');
 	}
 	
@@ -82,7 +82,7 @@
 		font-weight: 300;
 		padding: .25em 0 .125em 0;
 	}
-
+	
 	.btn {
 		position: absolute;
 		font-size: .666em;
@@ -90,6 +90,16 @@
 		right: -1em;
 	}
 
+}
+
+.hero__paragr {
+	font-size: .75em;
+	@include bp($s2) {
+		font-size: .666em;
+	}
+	p {
+		margin:.5em 0 0;
+	}
 }
 
 .content--dark {

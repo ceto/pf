@@ -314,6 +314,16 @@ function pf_metaboxes( array $meta_boxes ) {
 		    'id'   => 'welcometext',
 		    'type' => 'textarea_small',
 		  ),
+      array (
+        'name' => 'Bomber paragraph',
+        'id'   => 'homep',
+        'type' => 'wysiwyg',
+        'options' => array(
+          'media_buttons' => false, // show insert/upload button(s)
+          'textarea_rows' =>  3, // rows="..."
+          'teeny' => true, // output the minimal editor config used in Press This
+        ),
+      ),
 		  array (
 		    'name' => 'Button text',
 		    'id'   => 'buttontext',

@@ -21,6 +21,12 @@
 	<div class="wrapper wrapper--wide">
 		<div class="hero__text">
 			<h1><?php echo get_post_meta( get_the_ID(), 'welcometext', true ); ?></h1>
+			<div class="hero__paragr">
+			<?php if ( get_post_meta( get_the_ID(), 'homep', true )) : ?>
+				<div class="hero__paragr">
+				<?= wpautop(get_post_meta( get_the_ID(), 'homep', true )); ?>
+				</div>
+			<?php endif; ?>
 			<a href="<?php echo get_post_meta( get_the_ID(), 'buttonurl', true ); ?>" class="btn">
 				<?php echo get_post_meta( get_the_ID(), 'buttontext', true ); ?>
 			</a>
