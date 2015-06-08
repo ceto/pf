@@ -12,7 +12,7 @@
           <label for="form__name">navn</label>
         </div>
         <div class="formitem">
-          <input type="email" id="form__email" name="form__email" placeholder="e-post (obligatorisk)">
+          <input type="email" id="form__email" name="form__email" placeholder="e-post">
           <label for="form__email">e-post</label>
         </div>
         <div class="formitem">
