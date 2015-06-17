@@ -177,6 +177,7 @@ function pf_metaboxes( array $meta_boxes ) {
           'utsolgt' => 'Sold',
           'reserved' => 'Reserved',
           'solg' => 'Solg',
+          'solgt' => 'Solgt!!!',
       )
     ),
 

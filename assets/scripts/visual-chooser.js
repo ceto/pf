@@ -33,8 +33,8 @@ function redraw_canvas() {
     // if ( menuitem.attr('data-state')==='fri' ) {
     //   text="<h3>"+menuitem.attr('data-name')+"</h3><p>Område: "+menuitem.attr('data-omr')+",<br>Pris: "+menuitem.attr('data-pris')+"</p>";
     // } else {
-    //   if ( menuitem.attr('data-state')==='solg' ) {
-    //     text="Solg";
+    //   if ( menuitem.attr('data-state')==='solgt' ) {
+    //     text="Solgt";
     //   } else {
     //     text=menuitem.attr('data-name');
     //   }
@@ -43,7 +43,7 @@ function redraw_canvas() {
     items[index].attr(
       {
        
-        fill: (menuitem.attr('data-state')==='fri')?'#F37C4B':(menuitem.attr('data-state')==='solg')?'#EA4933':'#EBC40C',
+        fill: (menuitem.attr('data-state')==='fri')?'#F37C4B':(menuitem.attr('data-state')==='solgt')?'#EA4933':'#EBC40C',
         opacity: (menuitem.attr('data-state')!=='fri')?0.5:0,
         stroke: '#000',
         'stroke-width': '0',
