@@ -30,20 +30,20 @@ function redraw_canvas() {
     items[index].node.id = 'v' +  menuitem.attr('id');
 
 
-    if ( menuitem.attr('data-state')==='fri' ) {
-      text="<h3>"+menuitem.attr('data-name')+"</h3><p>Område: "+menuitem.attr('data-omr')+",<br>Pris: "+menuitem.attr('data-pris')+"</p>";
-    } else {
-      if ( menuitem.attr('data-state')==='utsolgt' ) {
-        text="Utsolgt";
-      } else {
-        text=menuitem.attr('data-name');
-      }
-    }
+    // if ( menuitem.attr('data-state')==='fri' ) {
+    //   text="<h3>"+menuitem.attr('data-name')+"</h3><p>Område: "+menuitem.attr('data-omr')+",<br>Pris: "+menuitem.attr('data-pris')+"</p>";
+    // } else {
+    //   if ( menuitem.attr('data-state')==='solg' ) {
+    //     text="Solg";
+    //   } else {
+    //     text=menuitem.attr('data-name');
+    //   }
+    // }
 
     items[index].attr(
       {
        
-        fill: (menuitem.attr('data-state')==='fri')?'#F37C4B':(menuitem.attr('data-state')==='utsolgt')?'#EA4933':'#EBC40C',
+        fill: (menuitem.attr('data-state')==='fri')?'#F37C4B':(menuitem.attr('data-state')==='solg')?'#EA4933':'#EBC40C',
         opacity: (menuitem.attr('data-state')!=='fri')?0.5:0,
         stroke: '#000',
         'stroke-width': '0',
@@ -130,7 +130,7 @@ function redraw_canvas() {
         $tiptext+='<p class="tooltip__item"><span>Pris</span>'+pris+'</p>';
       }
       if(state!=='fri') {
-        $tiptext+='<p class="tooltip__item"><span>State</span>'+state+'</p>';
+        $tiptext+='<p class="tooltip__item"><span>Status</span>'+state+'</p>';
       }
       return $tiptext;
     }

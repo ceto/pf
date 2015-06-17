@@ -176,6 +176,7 @@ function pf_metaboxes( array $meta_boxes ) {
           'fri' => 'Available',
           'utsolgt' => 'Sold',
           'reserved' => 'Reserved',
+          'solg' => 'Solg',
       )
     ),
 
@@ -334,8 +335,11 @@ function pf_metaboxes( array $meta_boxes ) {
 		    'id'   => 'buttonurl',
 		    'type' => 'text_url',
 		  ),
-
-
+      array (
+        'name' => 'Orange circle',
+        'id'   => 'circletext',
+        'type' => 'text_medium',
+      ),
 
     )
   );

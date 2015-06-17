@@ -30,6 +30,14 @@
 			<a href="<?php echo get_post_meta( get_the_ID(), 'buttonurl', true ); ?>" class="btn">
 				<?php echo get_post_meta( get_the_ID(), 'buttontext', true ); ?>
 			</a>
+			<?php if ( get_post_meta( get_the_ID(), 'circletext', true )) : ?>
+				<div class="hero__circle">
+					<span class="hero__circle__inner">
+						<?= get_post_meta( get_the_ID(), 'circletext', true ); ?>
+					</span>
+				</div>
+			<?php endif; ?>
+
 		</div>
 	</div>
 </header>
