@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "normalize-css": "~3.0.2",
+    "normalize-css": "~3.0.3",
     "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.4",
     "magnific-popup": "https://github.com/dimsemenov/Magnific-Popup.git#~1.0.0",
@@ -16,9 +16,6 @@
   "overrides": {
     "modernizr": {
       "main": "./modernizr.js"
-    },
-    "normalize-css": {
-      "main": "./normalize.css"
     },
     "bootstrap-sass-official": {
       "main": [

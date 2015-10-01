@@ -4,7 +4,7 @@
 
         $name = strip_tags(trim($_POST["form__name"]));
 		$name = str_replace(array("\r","\n"),array(" "," "),$name);
-        
+
         $email = filter_var(trim($_POST["form__email"]), FILTER_SANITIZE_EMAIL);
 
         $tel = strip_tags(trim($_POST["form__tel"]));
@@ -34,7 +34,7 @@
 
         // Set the email subject.
         $subject = 'Pengeskapsfabrikken contact from '.$name;
-        
+
         $subject2 = 'Takk for din henvendelse.';
         $email_content2='Du er nå registrert som interessent i boligprosjektet Pengeskapsfabrikken.'."\r\n".'Vi jobber nå med utarbeidelse av hjemmeside og prospekt.'."\r\n".'Som registrert interessent holder vi deg fortløpende orientert om fremdriften.';
 
@@ -45,12 +45,12 @@
         $email_content .= 'Message:'."\r\n".$message."\r\n";
 
         // Build the email headers.
-        
+
         $htmlheaders  = 'MIME-Version: 1.0' . "\r\n";
         $htmlheaders .= 'Content-type: text/plain; charset=utf-8' . "\r\n";
 
         $email_headers = $htmlheaders. 'From: '.$name.' <'.$email.'>'. "\r\n";
-            
+
         $email_headers2  = $htmlheaders. 'From: Christian Fr. Foss <'.$recipient.'>'. "\r\n";
 
         // Send the email.
@@ -58,10 +58,11 @@
             // Set a 200 (okay) response code.
             http_response_code(200);
             echo "Takk for din henvendelse.";
-            
-            $txt = "../../uploads/emails/data.txt"; 
-            $fh = fopen($txt, 'a'); 
-            $txt=date("F j, Y, g:i a").' | '.$name.' | '.$email.' | '.$tel.' | '.str_replace(array("\r","\n"),array(" "," "),$message).PHP_EOL; 
+            echo '<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6037119513304&amp;cd[value]=0.01&amp;cd[currency]=USD&amp;noscript=1" /></noscript>';
+
+            $txt = "../../uploads/emails/data.txt";
+            $fh = fopen($txt, 'a');
+            $txt=date("F j, Y, g:i a").' | '.$name.' | '.$email.' | '.$tel.' | '.str_replace(array("\r","\n"),array(" "," "),$message).PHP_EOL;
             fwrite($fh,$txt);
             fclose($fh);
 
